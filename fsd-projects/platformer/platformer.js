@@ -51,9 +51,9 @@ createPlatform(400, 250, 200, 15, "blue", 200, 500, 2)
 
     // TODO 3 - Create Collectables
 
-    createCollectable("database", 325, 550);
+    createCollectable("abood", 325, 550);
 
-    createCollectable("database", 525, 170, 0.5, 1);
+    createCollectable("abood", 525, 170, 0.5, 1);
 
     createCollectable("coin", 725, 300, 0, 0);    
 
