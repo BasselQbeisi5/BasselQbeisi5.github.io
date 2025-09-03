@@ -57,9 +57,9 @@ createPlatform(1050, 625, 90, 15, "green");
 
     // TODO 3 - Create Collectables
 
-    createCollectable("database", 325, 550);
+    createCollectable("diamond", 325, 550);
 
-    createCollectable("database", 525, 170);
+    createCollectable("daimond", 525, 170);
 
     createCollectable("coin", 725, 150);    
 
