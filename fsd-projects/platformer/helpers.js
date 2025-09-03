@@ -527,7 +527,7 @@ function drawCollectables() {
       ctx.globalAlpha = collectables[i].alpha;
       ctx.drawImage(
         collectables[i].image,
-        200 + 100 * i,
+        300 + 100 * i,
         10,
         collectableWidth,
         collectableHeight
