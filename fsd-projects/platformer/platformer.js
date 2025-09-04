@@ -47,7 +47,7 @@ createPlatform(700, 200, 90, 15, "green");
 
 createPlatform(400, 250, 225, 15, "Blue	", 200, 500, 1.5)
 
-createPlatform(845, 100, 50, 650,"DarkSlateGray");
+createPlatform(845, 100, 50, 650,"DimGray");
 
 createPlatform(100,1, 0, 549, "blue");
 
@@ -83,6 +83,8 @@ createPlatform(1275, 100, 125, 25, "Goldenrod");
     createCollectable("coin", 1065, 510, 0.3, 1);
 
     createCollectable("money", 1320, 400, 0.2, 1);
+
+    createCollectable("flag", 1310, 59)
 
     // TODO 4 - Create Cannons
 
