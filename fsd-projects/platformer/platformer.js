@@ -33,7 +33,7 @@ $(function () {
 
     // TODO 2 - Create Platforms
 
-createPlatform(100, 700, 90, 15, "green");
+createPlatform(50, 700, 130, 15, "green");
 
 createPlatform(300, 600, 90, 15, "green");
 
@@ -45,37 +45,56 @@ createPlatform(100, 350, 90, 15, "green");
 
 createPlatform(700, 200, 90, 15, "green");
 
-createPlatform(950, 700, 90, 15, "green");
+createPlatform(400, 250, 225, 15, "Blue	", 200, 500, 1.5)
 
-createPlatform(400, 250, 225, 15, "blue", 200, 500, 1.5)
+createPlatform(845, 100, 50, 650,"DarkSlateGray");
 
-createPlatform(850, 100, 15, 650, "black");
-
-createPlatform(100,1, 10, 550, "black");
+createPlatform(100,1, 0, 549, "blue");
 
 createPlatform(1050, 625, 90, 15, "green");
 
+createPlatform(1300, 510, 100, 15, "green");
+
+createPlatform(1100, 400, 90, 15, "green");
+
+createPlatform(900, 700, 90, 15, "green");
+
+createPlatform(1310, 300, 90, 15, "green");
+
+createPlatform(1100, 200, 90, 15, "green");
+
+createPlatform(1100, 0, 0, 200, "green");
+
+createPlatform(1275, 100, 125, 25, "Goldenrod");
 
 
     // TODO 3 - Create Collectables
 
     createCollectable("diamond1", 325, 550);
 
-    createCollectable("diamond1", 525, 170);
+    createCollectable("money", 525, 170);
 
-    createCollectable("coin", 725, 150);    
+    createCollectable("coin", 725, 150,);    
 
-    createCollectable("coin", 120, 290);  
+    createCollectable("coin", 120, 290, 0.5, 1);  
+
+    createCollectable("diamond1", 846, 60);
+
+    createCollectable("coin", 1065, 510, 0.3, 1);
+
+    createCollectable("money", 1320, 400, 0.2, 1);
 
     // TODO 4 - Create Cannons
 
     createCannon("top", 275, 900);
 
-// createCannon("right", 350, 1500);
+createCannon("bottom", 1190, 800);
 
-createCannon("bottom", 550, 1100);
+createCannon("bottom", 550, 1000);
 
-    createCannon("bottom", 400, 1000);
+    createCannon("bottom", 400, 900);
+
+    createCannon("top", 1050, 1500);
     
     //////////////////////////////////
     // ONLY CHANGE ABOVE THIS POINT //

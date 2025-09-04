@@ -101,4 +101,5 @@ var collectableList = {
  coin: { image: "images/collectables/coin.png" },
 diamond1: { image: "images/collectables/diamond1.png" },
 money: {image: "images/collectables/money.png"},
+flag: {image: "images/collectables/flag.png"}
 };
