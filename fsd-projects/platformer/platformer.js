@@ -55,6 +55,8 @@ createPlatform(100,1, 10, 550, "black");
 
 createPlatform(1050, 625, 90, 15, "green");
 
+
+
     // TODO 3 - Create Collectables
 
     createCollectable("diamond1", 325, 550);
