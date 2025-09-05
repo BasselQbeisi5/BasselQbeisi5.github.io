@@ -24,6 +24,7 @@ function main() {
   drawCannons();
   drawCollectables();
   playerFrictionAndGravity();
+  
 
   player.x += player.speedX;
   player.y += player.speedY;
@@ -37,6 +38,7 @@ function main() {
   // debug()                   //debugging values. Comment this out when not debugging.
   drawRobot(); //this actually displays the image of the robot.
 }
+
 
 function getJSON(url, callback) {
   var xhr = new XMLHttpRequest();

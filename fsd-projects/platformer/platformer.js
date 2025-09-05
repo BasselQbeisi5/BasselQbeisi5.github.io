@@ -51,7 +51,7 @@ createPlatform(845, 100, 50, 650,"DimGray");
 
 createPlatform(100,1, 0, 549, "blue");
 
-createPlatform(1050, 625, 90, 15, "green");
+createPlatform(1050, 620, 100, 15, "green");
 
 createPlatform(1300, 510, 100, 15, "green");
 
