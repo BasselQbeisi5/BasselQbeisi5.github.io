@@ -8,7 +8,7 @@
       .box {
         width: 70px;
         height: 70px;
-        background-color: teal;
+        background-color: rgb(255, 255, 255);
         font-size: 300%;
         text-align: center;
         user-select: none;
@@ -18,7 +18,11 @@
         /* Change me! */
         left: 0px;
       }
-
+body {
+  background-image: url("https://cdn12.picryl.com/photo/2016/12/31/space-galaxy-universe-backgrounds-textures-000664-1024.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
       .board {
         height: 100vh;
       }
@@ -43,7 +47,7 @@
         var box = jQuery(".box"); // reference to the HTML .box element
         var board = jQuery(".board"); // reference to the HTML .board element
         var boardWidth = board.width(); // the maximum X-Coordinate of the screen
-
+        var boardHeight = jQuery(window).height();
         // update the boardWidth variable when the window is resized
         jQuery(window).on("resize", function () {
           boardWidth = board.width();
@@ -56,8 +60,9 @@
         box.on("click", handleBoxClick);
 
         // moves the Box to a new position on the screen along the X-Axis
-        function moveBoxTo(newPositionX) {
+        function moveBoxTo(newPositionX, newPositionY) {
           box.css("left", newPositionX);
+          box.css("top", newPositionY);
         }
 
         // changes the text displayed on the Box
@@ -76,7 +81,10 @@
         var points = 0
 
         var speed = 10
+        
+        var positionY = 50
 
+        var speedY = 10
         
 
 
@@ -87,15 +95,19 @@
          */
         function update() {
 
-        moveBoxTo(positionX)
+        moveBoxTo(positionX, positionY);
 
-        positionX += speed
+        positionX += speed;
 
-        if(positionX > boardWidth){speed *= -1;}
+        positionY += speedY;
 
-        if(positionX < 0){speed *= -1;
-}
+        if(positionX > boardWidth){speed *= -1}
+
+        if (positionY > boardHeight){speedY *= -1}
+
+        if(positionX < 0){speed *= -1}
           
+        if (positionY < 0){speedY *= -1}
         }
 
         /**
@@ -110,6 +122,8 @@
         { 
 
         positionX = 0
+
+        positionY = 0
 
         speed = 3 * points + 10;
 
