@@ -30,7 +30,7 @@ var init = function (window) {
 
         // TODO 2 : Create a function that draws a circle 
         
-        function drawCircle(params) {
+        function drawCircle() {
 
 
        circle = draw.randomCircleInArea(canvas, true, true, "#999", 2);
@@ -138,15 +138,15 @@ var init = function (window) {
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            if (circle.x < 0) {
+            else if (circle.x < 0) {
                 circle.x = canvas.width;
             }
 
-            if (circle.y > canvas.height) {
+            else if (circle.y > canvas.height) {
                 circle.y = 0
             }
 
-            if (circle.y < 0) {
+            else if (circle.y < 0) {
                 circle.y = canvas.height
             }
 
