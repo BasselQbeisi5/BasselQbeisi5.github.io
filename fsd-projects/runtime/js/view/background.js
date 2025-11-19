@@ -43,13 +43,21 @@ var background = function (window) {
             background.addChild(backgroundFill);
             
             // TODO 2: - Add a moon and starfield
-            
+            var desert = draw.bitmap("img/desert.png");
+            desert.x = 0;
+            desert.y = 0;
+            desert.scaleX = 2.2;
+            desert.scaleY = 2;
+            background.addChild(desert);
             
             // TODO 4: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
             
             
             // TODO 3: Part 1 - Add a tree
-            
+            var cactus = draw.bitmap("img/cactus.png");
+            cactus.x = 0;
+            cactus.y = 0;
+            background.addChild(cactus);
             
         } // end of render function - DO NOT DELETE
         
