@@ -50,42 +50,33 @@ var runLevels = function (window) {
     enemy.onPlayerCollision = function (){game.changeIntegrity(-15)};
     enemy.onProjectileCollision = function (){game.increaseScore(100);enemy.shrink()}
     }
-    createEnemy(400, groundY - 75);
-    createEnemy(800, groundY - 100);
+    createEnemy(400, groundY - 65);
+    createEnemy(700, groundY - 100);
     createEnemy(950, groundY - 50);
     createEnemy(1300, groundY - 25);
 
-    // function createReward(x, y){
-    // var reward = game.createGameItem("reward", 25)
-    // var coin = draw.circle(2, yellow, balck, 1);
-    // coin.x = -25;
-    // coin.y = -25;
-    // reward.addChild(coin);
-    // coin.x = x;
-    // coin.y = y;
-    // game.addGameItem(reward);
-    // }
-    // createReward(500, groundY - 75);
     
-// Start
 function createReward(x, y){
     var reward = game.createGameItem("reward", 25);
-    var coin = draw.circle(25,"gold", "gold", 1);
-    coin.x = -25;
-    coin.y = -25;
-    reward.addChild(coin);
+    var bandage = draw.bitmap("img/bandage.png");
+    bandage.x = -25;
+    bandage.y = -25;
+    bandage.scaleX = 0.125;
+    bandage.scaleY = 0.125;
+    bandage.scale
+    reward.addChild(bandage);
     reward.x = x;
     reward.y = y;
     game.addGameItem(reward);
     reward.velocityX = -0.5;
-    // reward.rotationalVelocity = 10
+    
 
     reward.onPlayerCollision = function (){game.changeIntegrity(15); reward.fadeOut()};
     reward.onProjectileCollision = function (){game.increaseScore(100);reward.shrink()};
 }
-createReward(500, groundY - 75);
+createReward(500, groundY - 50);
 
-// Stop
+
 
     function startLevel() {
       // TODO 13 goes below here
