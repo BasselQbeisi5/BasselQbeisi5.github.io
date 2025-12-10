@@ -30,6 +30,8 @@ var runLevels = function (window) {
     sawBladeHitZone.addChild(obstacleImage);
     obstacleImage.x = -25;
     obstacleImage.y = -25;
+    
+
     }
     createSawBlade(400, 310);
     createSawBlade(650, 235);
@@ -37,23 +39,28 @@ var runLevels = function (window) {
 
     function createEnemy(x, y){
     var enemy = game.createGameItem("enemy", 25);
+    // var redSquare = draw.bitmap("img/enemy.png");
     var redSquare = draw.rect(50, 50, "red");
+    enemy.x = -25;
+    enemy.y = -25;
+    enemy.scaleX = 1;
+    enemy.scaleY = 1;
     redSquare.x = -25;
     redSquare.y = -25;
     enemy.addChild(redSquare);
     enemy.x = x;
     enemy.y = y;
     game.addGameItem(enemy);
-    enemy.velocityX = -0.5;
-    enemy.rotationalVelocity = 10
+    enemy.velocityX = -1;
+    enemy.rotationalVelocity = 10;
 
     enemy.onPlayerCollision = function (){game.changeIntegrity(-15)};
     enemy.onProjectileCollision = function (){game.increaseScore(100);enemy.shrink()}
     }
     createEnemy(400, groundY - 65);
-    createEnemy(700, groundY - 100);
-    createEnemy(950, groundY - 50);
-    createEnemy(1300, groundY - 25);
+    createEnemy(700, groundY - 110);
+    createEnemy(950, groundY - 70);
+    createEnemy(1300, groundY - 50);
 
     
 function createReward(x, y){
@@ -63,20 +70,22 @@ function createReward(x, y){
     bandage.y = -25;
     bandage.scaleX = 0.125;
     bandage.scaleY = 0.125;
-    bandage.scale
     reward.addChild(bandage);
     reward.x = x;
     reward.y = y;
     game.addGameItem(reward);
     reward.velocityX = -0.5;
     
-
     reward.onPlayerCollision = function (){game.changeIntegrity(15); reward.fadeOut()};
     reward.onProjectileCollision = function (){game.increaseScore(100);reward.shrink()};
-}
-createReward(500, groundY - 50);
+  }
 
+  createReward(500, groundY - 110);
+  
+  function createMarker(){
 
+    
+  }
 
     function startLevel() {
       // TODO 13 goes below here
