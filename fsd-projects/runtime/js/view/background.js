@@ -46,8 +46,10 @@ var background = function (window) {
             
             // TODO 2: - Add a moon and starfield
             for(var i = 0; i < 100; i++) {
-            // var circle = draw.circle(4, "white", "LightGray", 1);
-            var circle = draw.bitmap("img/star.png");
+            var circle = draw.circle(4, "white", "LightGray", 1);
+            // var circle = draw.bitmap("img/star.png");
+            circle.scaleX = 0.75;
+            circle.scaleY = 0.75
             circle.x = canvasWidth * Math.random();
             circle.y = groundY * Math.random();
             background.addChild(circle);}
